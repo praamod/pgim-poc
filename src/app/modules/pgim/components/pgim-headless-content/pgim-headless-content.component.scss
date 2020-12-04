@@ -1,0 +1,27 @@
+@charset "UTF-8"; /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+.container {
+  width: calc(100% - 5rem);
+}
+.container,
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container,
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+

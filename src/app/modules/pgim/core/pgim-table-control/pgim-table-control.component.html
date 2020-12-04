@@ -1,0 +1,19 @@
+<div id="{{ item.id }}" [attr.class]="ctrlConfig?.size">
+  <div class="overview-content-section">
+    <table mat-table *ngIf="dataSource" [dataSource]="dataSource" class="mat-elevation-z1" [attr.class]="ctrlConfig?.cssClass">
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+        <td mat-cell *matCellDef="let element">{{ element[column] }}</td>
+      </ng-container>
+      <ng-container *ngIf="ctrlConfig?.hasHeaders">
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
+<span class="clearfix"> </span>
+<br />
+<!-- <pre>
+  {{dataSource | json}}
+</pre> -->

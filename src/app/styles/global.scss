@@ -1,0 +1,27 @@
+@import 'mixins';
+@import '~@angular/material/theming';
+
+
+// * {
+//   @include font-roboto();
+// }
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+// $custom-typography: mat-typography-config(
+//   $font-family: 'Knockout-HTF48-Featherweight',
+//   $headline: mat-typography-level(32px, 48px, 700),
+//   $body-1: mat-typography-level(16px, 24px, 500),
+// );
+
+// @include angular-material-typography($custom-typography);
+
+// MATERIAL
+@import 'material';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+

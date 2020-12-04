@@ -1,0 +1,25 @@
+<div >
+  <div class="overview-content-section">
+    <div class="box" [attr.class]="ctrlConfig?.size">
+      <div *ngIf="gridAttribute?.menu_title" class="h5 assets-subhead">
+        {{ gridAttribute.menu_title }}
+      </div>
+      <div *ngFor="let rowContent of gridDataSource" class="assets-breakdown row">
+        <div
+          [ngClass]="{
+            'col-xs-9 text-left': i % 2 === 0,
+            'col-xs-3 text-center padding-left-0': i % 2 !== 0
+          }"
+          *ngFor="let column of displayedColumns; let i = index"
+        >
+          {{ rowContent[column] }}
+        </div>
+      </div>
+    </div>
+    <span class="clearfix" *ngIf="ctrlConfig && ctrlConfig.clearFix === true"> </span>
+  </div>
+</div>
+
+<!-- <pre>
+  {{ gridDataSource | json }}
+</pre> -->

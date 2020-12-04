@@ -1,0 +1,40 @@
+<div class="spacing-scheme-md-bottom">
+  <div class="container" [@fadeIn]="'fadeIn'">
+    <div class="row">
+      <!-- <ng-container *ngIf="ctrlConfig.size">
+        <div [attr.class]="ctrlConfig.size">
+          <ng-container
+            *ngFor="let item of items"
+            appDynamicItem
+            [item]="item"
+            [itemConfig]="itemConfig"
+          >
+          </ng-container>
+        </div>
+      </ng-container> -->
+
+      <div *ngIf="ctrlConfig.size; else elseBlock">
+        <div [attr.class]="ctrlConfig.size">
+          <div class="row">
+            <ng-container
+              *ngFor="let item of items"
+              appDynamicItem
+              [item]="item"
+              [itemConfig]="itemConfig"
+            >
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <ng-template #elseBlock
+        ><ng-container
+          *ngFor="let item of items"
+          appDynamicItem
+          [item]="item"
+          [itemConfig]="itemConfig"
+        >
+        </ng-container
+      ></ng-template>
+    </div>
+  </div>
+</div>

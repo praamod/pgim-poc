@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+
+mat-card-title, mat-card-subtitle, .mat-card-image {
+  cursor: pointer;
+}
+
+.container {
+  width: 65%;
+  @include push--auto();
+  margin-top: 2rem;
+}
+
+button {
+  @include push--auto(2rem);
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.clear {
+  clear: both;
+}

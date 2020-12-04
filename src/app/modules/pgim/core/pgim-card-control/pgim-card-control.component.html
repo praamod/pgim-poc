@@ -1,0 +1,32 @@
+<!-- <mat-card class="example-card">
+  <mat-card-content>
+
+  </mat-card-content>
+</mat-card> -->
+<div
+  class="col-md-12"
+  *ngIf="ctrlAttribute && ctrlAttribute?.fund_date_text"
+>
+  <div class="h5">
+    <span
+      ><div class="as-of-data secondary">
+        <div class="h2">
+          <span>{{ ctrlAttribute?.section_title }}</span
+          ><span class="h3-date" *ngIf="ctrlAttribute?.fund_date_text">
+            {{ ctrlAttribute.fund_date_text }}</span
+          >
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+<div [attr.class]="ctrlConfig?.size">
+  <div class="overview-content-section">
+    <ng-container *ngFor="let item of items" appDynamicItem [item]="item" [itemConfig]="itemConfig">
+    </ng-container>
+  </div>
+  <div *ngIf="ctrlConfig?.hasBottomSeperator" class="padding-top-20 padding-bottom-20">
+    <hr />
+  </div>
+</div>
+<br />
